@@ -1,0 +1,37 @@
+body{
+    background-color: lightblue;
+
+}
+#v1 {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: center; /* Center content on smaller screens */
+    padding: 15px;
+}
+
+#v {
+    padding: 10px;
+    flex: 1 1 300px; /* Allows flexibility and a minimum width */
+}
+
+iframe {
+    width: 100%; /* Full width inside its container */
+    height: auto; /* Adjust height automatically */
+}
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media screen and (max-width: 768px) {
+    #v {
+        flex: 1 1 100%; /* Videos take full width on smaller screens */
+    }
+}
+
+/* For screens smaller than 576px (mobile devices) */
+@media screen and (max-width: 576px) {
+    #v1 {
+        padding-left: 0; /* Remove padding */
+    }
+
+    iframe {
+        height: 200px; /* Fixed height for smaller screens */
+    }
+}
